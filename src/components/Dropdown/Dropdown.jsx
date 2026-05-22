@@ -210,20 +210,20 @@ const Dropdown = forwardRef(function Dropdown(
 
   const triggerClasses = [
     'flex items-center justify-between w-full px-4 py-2.5',
-    'bg-white border rounded-lg text-left',
+    'bg-white dark:bg-slate-800 border rounded-lg text-left',
     'transition-all duration-200 ease-in-out',
-    'focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500',
+    'focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 dark:focus:ring-primary-500/20',
     error
-      ? 'border-danger-500 focus:ring-danger-500/30 focus:border-danger-500'
-      : 'border-slate-300',
+      ? 'border-danger-500 focus:ring-danger-500/30 focus:border-danger-500 dark:border-danger-500'
+      : 'border-slate-300 dark:border-slate-700',
     disabled
-      ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-      : 'cursor-pointer hover:border-slate-400',
+      ? 'bg-slate-100 dark:bg-slate-900/50 text-slate-400 dark:text-slate-600 cursor-not-allowed'
+      : 'cursor-pointer hover:border-slate-400 dark:hover:border-slate-500',
   ].join(' ');
 
   const panelClasses = [
     'absolute z-50 w-full mt-1',
-    'bg-white rounded-lg shadow-lg border border-slate-200',
+    'bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700',
     'max-h-60 overflow-y-auto',
     'animate-fade-in',
   ].join(' ');
@@ -239,7 +239,7 @@ const Dropdown = forwardRef(function Dropdown(
         <label
           id={labelId}
           htmlFor={dropdownId}
-          className="block text-sm font-medium text-slate-700 mb-1.5"
+          className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
         >
           {label}
         </label>
@@ -260,7 +260,7 @@ const Dropdown = forwardRef(function Dropdown(
       >
         <span
           className={
-            selectedOption ? 'text-slate-900' : 'text-slate-400'
+            selectedOption ? 'text-slate-900 dark:text-slate-100' : 'text-slate-400 dark:text-slate-500'
           }
         >
           {selectedOption ? selectedOption.label : placeholder}
@@ -268,7 +268,7 @@ const Dropdown = forwardRef(function Dropdown(
 
         {/* Chevron Icon */}
         <svg
-          className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${
+          className={`w-5 h-5 text-slate-400 dark:text-slate-500 transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''
           }`}
           xmlns="http://www.w3.org/2000/svg"
@@ -289,11 +289,11 @@ const Dropdown = forwardRef(function Dropdown(
         <div className={panelClasses} data-testid="dropdown-panel">
           {/* Search Input */}
           {searchable && (
-            <div className="sticky top-0 bg-white p-2 border-b border-slate-200">
+            <div className="sticky top-0 bg-white dark:bg-slate-800 p-2 border-b border-slate-200 dark:border-slate-700">
               <input
                 ref={searchInputRef}
                 type="text"
-                className="w-full px-3 py-2 text-sm border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500"
+                className="w-full px-3 py-2 text-sm border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500"
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={handleSearchChange}
@@ -313,7 +313,7 @@ const Dropdown = forwardRef(function Dropdown(
             data-testid="dropdown-listbox"
           >
             {filteredOptions.length === 0 ? (
-              <li className="px-4 py-2.5 text-sm text-slate-400 text-center">
+              <li className="px-4 py-2.5 text-sm text-slate-400 dark:text-slate-500 text-center">
                 No options found
               </li>
             ) : (
@@ -325,15 +325,15 @@ const Dropdown = forwardRef(function Dropdown(
                   'flex items-center justify-between px-4 py-2.5 text-sm cursor-pointer',
                   'transition-colors duration-100',
                   isSelected
-                    ? 'bg-primary-50 text-primary-600 font-medium'
-                    : 'text-slate-700',
+                    ? 'bg-primary-50 dark:bg-primary-950/30 text-primary-600 dark:text-primary-400 font-medium'
+                    : 'text-slate-700 dark:text-slate-200',
                   isFocused && !isSelected
-                    ? 'bg-slate-100 ring-2 ring-inset ring-primary-500/20'
+                    ? 'bg-slate-100 dark:bg-slate-700/50 ring-2 ring-inset ring-primary-500/20'
                     : '',
                   isFocused && isSelected
                     ? 'ring-2 ring-inset ring-primary-500/20'
                     : '',
-                  !isSelected && !isFocused ? 'hover:bg-slate-50' : '',
+                  !isSelected && !isFocused ? 'hover:bg-slate-50 dark:hover:bg-slate-700/30' : '',
                 ].join(' ');
 
                 return (
@@ -379,7 +379,7 @@ const Dropdown = forwardRef(function Dropdown(
       {(helperText || error) && (
         <p
           className={`mt-1.5 text-sm ${
-            error ? 'text-danger-500' : 'text-slate-500'
+            error ? 'text-danger-500' : 'text-slate-500 dark:text-slate-400'
           }`}
         >
           {error || helperText}

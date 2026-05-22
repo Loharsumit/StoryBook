@@ -123,7 +123,7 @@ const Modal = forwardRef(function Modal(
         aria-labelledby={titleId}
         tabIndex={-1}
         className={[
-          'bg-white rounded-xl shadow-2xl w-full animate-scale-in flex flex-col',
+          'bg-white dark:bg-slate-800 rounded-xl shadow-2xl w-full animate-scale-in flex flex-col',
           SIZE_CLASSES[size] || SIZE_CLASSES.md,
           className,
         ]
@@ -133,11 +133,11 @@ const Modal = forwardRef(function Modal(
       >
         {/* ---- Header ---- */}
         {(title || showCloseButton) && (
-          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-slate-700">
             {title && (
               <h2
                 id={titleId}
-                className="text-lg font-semibold text-gray-900"
+                className="text-lg font-semibold text-gray-900 dark:text-slate-100"
               >
                 {title}
               </h2>
@@ -147,7 +147,7 @@ const Modal = forwardRef(function Modal(
               <button
                 type="button"
                 onClick={onClose}
-                className="ml-auto inline-flex items-center justify-center rounded-lg p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors"
+                className="ml-auto inline-flex items-center justify-center rounded-lg p-1.5 text-gray-400 dark:text-slate-500 hover:text-gray-600 dark:hover:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors"
                 aria-label="Close modal"
                 data-testid="modal-close-button"
               >
@@ -173,7 +173,7 @@ const Modal = forwardRef(function Modal(
 
         {/* ---- Footer ---- */}
         {footer && (
-          <div className="px-6 py-4 border-t border-gray-200" data-testid="modal-footer">
+          <div className="px-6 py-4 border-t border-gray-200 dark:border-slate-700" data-testid="modal-footer">
             {footer}
           </div>
         )}

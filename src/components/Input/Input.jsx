@@ -44,7 +44,7 @@ const Input = forwardRef(
 
     // ---- Base input classes ----
     const baseInputClasses = [
-      'block w-full rounded-lg border bg-white px-3 transition-colors duration-150',
+      'block w-full rounded-lg border bg-white dark:bg-slate-800 dark:text-slate-100 px-3 transition-colors duration-150',
       'outline-none',
       sizeClasses[size] || sizeClasses.md,
     ];
@@ -56,15 +56,15 @@ const Input = forwardRef(
     // State-specific classes
     if (disabled) {
       baseInputClasses.push(
-        'opacity-50 cursor-not-allowed bg-slate-50 border-slate-300'
+        'opacity-50 cursor-not-allowed bg-slate-50 dark:bg-slate-900/50 border-slate-300 dark:border-slate-800'
       );
     } else if (error) {
       baseInputClasses.push(
-        'border-danger-500 focus:border-danger-500 focus:ring-2 focus:ring-danger-500/20'
+        'border-danger-500 focus:border-danger-500 focus:ring-2 focus:ring-danger-500/20 dark:border-danger-500 dark:focus:ring-danger-500/20'
       );
     } else {
       baseInputClasses.push(
-        'border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20'
+        'border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 dark:border-slate-700 dark:focus:border-primary-500 dark:focus:ring-primary-500/20'
       );
     }
 
@@ -84,7 +84,7 @@ const Input = forwardRef(
         {label && (
           <label
             htmlFor={inputId}
-            className="mb-1.5 block text-sm font-medium text-slate-700"
+            className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300"
           >
             {label}
             {required && (
@@ -100,7 +100,7 @@ const Input = forwardRef(
           {/* Left icon */}
           {leftIcon && (
             <span
-              className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400"
+              className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 dark:text-slate-500"
               aria-hidden="true"
               data-testid="left-icon"
             >
@@ -129,7 +129,7 @@ const Input = forwardRef(
           {/* Right icon */}
           {rightIcon && (
             <span
-              className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400"
+              className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 dark:text-slate-500"
               aria-hidden="true"
               data-testid="right-icon"
             >
@@ -151,7 +151,7 @@ const Input = forwardRef(
 
         {/* ---- Helper text (hidden when error is present) ---- */}
         {!error && helperText && (
-          <p id={helperId} className="mt-1.5 text-sm text-slate-500">
+          <p id={helperId} className="mt-1.5 text-sm text-slate-500 dark:text-slate-400">
             {helperText}
           </p>
         )}

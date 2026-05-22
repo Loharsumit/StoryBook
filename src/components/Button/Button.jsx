@@ -9,11 +9,11 @@ const variantStyles = {
   primary:
     'bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500',
   secondary:
-    'bg-slate-600 hover:bg-slate-700 text-white focus:ring-slate-500',
+    'bg-slate-600 hover:bg-slate-700 text-white focus:ring-slate-500 dark:bg-slate-700 dark:hover:bg-slate-600',
   outline:
-    'border-2 border-primary-600 text-primary-600 hover:bg-primary-50 focus:ring-primary-500',
+    'border-2 border-primary-600 text-primary-600 hover:bg-primary-50 focus:ring-primary-500 dark:text-primary-400 dark:border-primary-500 dark:hover:bg-primary-950/30',
   ghost:
-    'text-primary-600 hover:bg-primary-50 focus:ring-primary-500',
+    'text-primary-600 hover:bg-primary-50 focus:ring-primary-500 dark:text-primary-400 dark:hover:bg-primary-950/30',
   danger:
     'bg-danger-600 hover:bg-danger-700 text-white focus:ring-danger-500',
 };
@@ -72,7 +72,7 @@ const Button = forwardRef(
       // Base styles shared by all buttons
       'inline-flex items-center justify-center font-medium rounded-lg',
       'transition-colors duration-200 ease-in-out',
-      'focus:outline-none focus:ring-2 focus:ring-offset-2',
+      'focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-slate-900',
       // Variant-specific styles
       variantStyles[variant],
       // Size-specific styles

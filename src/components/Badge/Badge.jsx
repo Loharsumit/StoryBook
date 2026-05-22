@@ -9,33 +9,33 @@ import PropTypes from 'prop-types';
 const colorVariantStyles = {
   primary: {
     solid: 'bg-primary-600 text-white',
-    outline: 'border border-primary-600 text-primary-600',
-    subtle: 'bg-primary-100 text-primary-700',
+    outline: 'border border-primary-600 text-primary-600 dark:border-primary-500 dark:text-primary-400',
+    subtle: 'bg-primary-100 text-primary-700 dark:bg-primary-950/40 dark:text-primary-300',
   },
   success: {
     solid: 'bg-success-600 text-white',
-    outline: 'border border-success-600 text-success-600',
-    subtle: 'bg-success-100 text-success-700',
+    outline: 'border border-success-600 text-success-600 dark:border-success-500 dark:text-success-400',
+    subtle: 'bg-success-100 text-success-700 dark:bg-success-950/40 dark:text-success-300',
   },
   warning: {
     solid: 'bg-warning-600 text-white',
-    outline: 'border border-warning-600 text-warning-600',
-    subtle: 'bg-warning-100 text-warning-700',
+    outline: 'border border-warning-600 text-warning-600 dark:border-warning-500 dark:text-warning-400',
+    subtle: 'bg-warning-100 text-warning-700 dark:bg-warning-950/40 dark:text-warning-300',
   },
   danger: {
     solid: 'bg-danger-600 text-white',
-    outline: 'border border-danger-600 text-danger-600',
-    subtle: 'bg-danger-100 text-danger-700',
+    outline: 'border border-danger-600 text-danger-600 dark:border-danger-500 dark:text-danger-400',
+    subtle: 'bg-danger-100 text-danger-700 dark:bg-danger-950/40 dark:text-danger-300',
   },
   info: {
     solid: 'bg-info-600 text-white',
-    outline: 'border border-info-600 text-info-600',
-    subtle: 'bg-info-100 text-info-700',
+    outline: 'border border-info-600 text-info-600 dark:border-info-500 dark:text-info-400',
+    subtle: 'bg-info-100 text-info-700 dark:bg-info-950/40 dark:text-info-300',
   },
   slate: {
     solid: 'bg-slate-600 text-white',
-    outline: 'border border-slate-600 text-slate-600',
-    subtle: 'bg-slate-100 text-slate-700',
+    outline: 'border border-slate-600 text-slate-600 dark:border-slate-500 dark:text-slate-400',
+    subtle: 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300',
   },
 };
 
@@ -63,12 +63,12 @@ const dotSizeStyles = {
  * - outline / subtle variants use the color-600 shade
  */
 const dotColorStyles = {
-  primary: { solid: 'bg-white', outline: 'bg-primary-600', subtle: 'bg-primary-600' },
-  success: { solid: 'bg-white', outline: 'bg-success-600', subtle: 'bg-success-600' },
-  warning: { solid: 'bg-white', outline: 'bg-warning-600', subtle: 'bg-warning-600' },
-  danger: { solid: 'bg-white', outline: 'bg-danger-600', subtle: 'bg-danger-600' },
-  info: { solid: 'bg-white', outline: 'bg-info-600', subtle: 'bg-info-600' },
-  slate: { solid: 'bg-white', outline: 'bg-slate-600', subtle: 'bg-slate-600' },
+  primary: { solid: 'bg-white', outline: 'bg-primary-600 dark:bg-primary-400', subtle: 'bg-primary-600 dark:bg-primary-400' },
+  success: { solid: 'bg-white', outline: 'bg-success-600 dark:bg-success-400', subtle: 'bg-success-600 dark:bg-success-400' },
+  warning: { solid: 'bg-white', outline: 'bg-warning-600 dark:bg-warning-400', subtle: 'bg-warning-600 dark:bg-warning-400' },
+  danger: { solid: 'bg-white', outline: 'bg-danger-600 dark:bg-danger-400', subtle: 'bg-danger-600 dark:bg-danger-400' },
+  info: { solid: 'bg-white', outline: 'bg-info-600 dark:bg-info-400', subtle: 'bg-info-600 dark:bg-info-400' },
+  slate: { solid: 'bg-white', outline: 'bg-slate-600 dark:bg-slate-400', subtle: 'bg-slate-600 dark:bg-slate-400' },
 };
 
 /**

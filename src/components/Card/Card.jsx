@@ -69,13 +69,13 @@ const Card = forwardRef(
     // Build the class list based on props
     const cardClasses = [
       // Base styles
-      'bg-white overflow-hidden',
+      'bg-white dark:bg-slate-800 overflow-hidden',
       // Shadow variant
       shadowClasses[shadow] || shadowClasses.md,
       // Rounded variant
       roundedClasses[rounded] || roundedClasses.lg,
       // Border
-      bordered ? 'border border-slate-200' : '',
+      bordered ? 'border border-slate-200 dark:border-slate-700' : '',
       // Hoverable effect — subtle lift on hover
       hoverable ? 'hover:shadow-lg hover:-translate-y-1 transition-all duration-200' : '',
       // Clickable styles
@@ -119,10 +119,10 @@ const Card = forwardRef(
         {(title || subtitle) && (
           <div className="px-6 pt-4">
             {title && (
-              <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{title}</h3>
             )}
             {subtitle && (
-              <p className="mt-1 text-sm text-slate-500">{subtitle}</p>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{subtitle}</p>
             )}
           </div>
         )}
@@ -132,7 +132,7 @@ const Card = forwardRef(
 
         {/* Card footer — rendered at the bottom when provided */}
         {footer && (
-          <div className="px-6 py-3 bg-slate-50 border-t border-slate-100">
+          <div className="px-6 py-3 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-700">
             {footer}
           </div>
         )}

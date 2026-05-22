@@ -17,10 +17,10 @@ const positionClasses = {
  * Uses CSS borders to create a small triangle pointing toward the trigger.
  */
 const arrowClasses = {
-  top: 'top-full left-1/2 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-800',
-  bottom: 'bottom-full left-1/2 -translate-x-1/2 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-slate-800',
-  left: 'left-full top-1/2 -translate-y-1/2 border-t-4 border-b-4 border-l-4 border-t-transparent border-b-transparent border-l-slate-800',
-  right: 'right-full top-1/2 -translate-y-1/2 border-t-4 border-b-4 border-r-4 border-t-transparent border-b-transparent border-r-slate-800',
+  top: 'top-full left-1/2 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-900 dark:border-t-slate-950',
+  bottom: 'bottom-full left-1/2 -translate-x-1/2 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-slate-900 dark:border-b-slate-950',
+  left: 'left-full top-1/2 -translate-y-1/2 border-t-4 border-b-4 border-l-4 border-t-transparent border-b-transparent border-l-slate-900 dark:border-l-slate-950',
+  right: 'right-full top-1/2 -translate-y-1/2 border-t-4 border-b-4 border-r-4 border-t-transparent border-b-transparent border-r-slate-900 dark:border-r-slate-950',
 };
 
 /**
@@ -100,7 +100,7 @@ const Tooltip = ({
           role="tooltip"
           className={[
             'absolute z-50',
-            'bg-slate-800 text-white text-sm px-3 py-1.5 rounded-lg shadow-lg whitespace-nowrap',
+            'bg-slate-900 dark:bg-slate-950 text-white text-sm px-3 py-1.5 rounded-lg shadow-lg border border-slate-800 dark:border-slate-900 whitespace-nowrap',
             'animate-fade-in',
             positionClasses[position],
             className,

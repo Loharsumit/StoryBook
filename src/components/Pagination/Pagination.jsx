@@ -164,7 +164,7 @@ const Pagination = ({
    */
   const baseButtonClasses = [
     'inline-flex items-center justify-center',
-    'rounded-lg border border-slate-200',
+    'rounded-lg border border-slate-200 dark:border-slate-700',
     'transition-colors duration-150',
     sizeStyles[size],
   ].join(' ');
@@ -182,7 +182,7 @@ const Pagination = ({
     if (isActive) {
       stateClasses.push('bg-primary-600 text-white border-primary-600');
     } else {
-      stateClasses.push('bg-white text-slate-700 hover:bg-primary-50');
+      stateClasses.push('bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-primary-50 dark:hover:bg-slate-700');
     }
 
     if (isDisabled || disabled) {

@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 const ChevronIcon = ({ isExpanded }) => (
   <svg
     className={[
-      'h-5 w-5 text-slate-500 transition-transform duration-200',
+      'h-5 w-5 text-slate-500 dark:text-slate-400 transition-transform duration-200',
       isExpanded ? 'rotate-180' : '',
     ]
       .filter(Boolean)
@@ -76,11 +76,11 @@ const AccordionItem = ({
 
   // Build the header button classes
   const headerClasses = [
-    'w-full flex items-center px-4 py-3 bg-white text-left font-medium text-slate-700 border-b border-slate-200',
+    'w-full flex items-center px-4 py-3 bg-white dark:bg-slate-800 text-left font-medium text-slate-700 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700',
     iconPosition === 'left' ? 'flex-row' : 'justify-between',
     disabled
       ? 'opacity-50 cursor-not-allowed'
-      : 'hover:bg-slate-50 cursor-pointer',
+      : 'hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer',
   ]
     .filter(Boolean)
     .join(' ');
@@ -131,7 +131,7 @@ const AccordionItem = ({
         style={panelStyle}
         data-testid={`accordion-panel-${id}`}
       >
-        <div ref={contentRef} className="px-4 py-3 text-slate-600 text-sm">
+        <div ref={contentRef} className="px-4 py-3 text-slate-600 dark:text-slate-300 text-sm">
           {content}
         </div>
       </div>
@@ -205,7 +205,7 @@ const Accordion = ({
 
   // Build the wrapper classes
   const wrapperClasses = [
-    'border border-slate-200 rounded-lg overflow-hidden divide-y divide-slate-200',
+    'border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden divide-y divide-slate-200 dark:divide-slate-700',
     className,
   ]
     .filter(Boolean)

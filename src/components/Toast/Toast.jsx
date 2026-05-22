@@ -73,20 +73,20 @@ const icons = {
  * Uses custom colors defined in tailwind.config.js.
  */
 const TYPE_STYLES = {
-  success: 'bg-success-50 border-l-4 border-success-500',
-  error: 'bg-danger-50 border-l-4 border-danger-500',
-  warning: 'bg-warning-50 border-l-4 border-warning-500',
-  info: 'bg-info-50 border-l-4 border-info-500',
+  success: 'bg-success-50 border-l-4 border-success-500 dark:bg-success-950/40 dark:border-success-500',
+  error: 'bg-danger-50 border-l-4 border-danger-500 dark:bg-danger-950/40 dark:border-danger-500',
+  warning: 'bg-warning-50 border-l-4 border-warning-500 dark:bg-warning-950/40 dark:border-warning-500',
+  info: 'bg-info-50 border-l-4 border-info-500 dark:bg-info-950/40 dark:border-info-500',
 };
 
 /**
  * Text color for the dismiss button per type, keeps visual consistency.
  */
 const DISMISS_BUTTON_STYLES = {
-  success: 'text-success-700 hover:text-success-500',
-  error: 'text-danger-700 hover:text-danger-500',
-  warning: 'text-warning-700 hover:text-warning-500',
-  info: 'text-info-700 hover:text-info-500',
+  success: 'text-success-700 hover:text-success-500 dark:text-success-400 dark:hover:text-success-300',
+  error: 'text-danger-700 hover:text-danger-500 dark:text-danger-400 dark:hover:text-danger-300',
+  warning: 'text-warning-700 hover:text-warning-500 dark:text-warning-400 dark:hover:text-warning-300',
+  info: 'text-info-700 hover:text-info-500 dark:text-info-400 dark:hover:text-info-300',
 };
 
 /**
@@ -127,7 +127,7 @@ const Toast = ({ id, type, message, duration, onDismiss, dismissible }) => {
       </span>
 
       {/* Message */}
-      <p className="flex-1 text-sm font-medium text-gray-800" data-testid="toast-message">
+      <p className="flex-1 text-sm font-medium text-gray-800 dark:text-slate-200" data-testid="toast-message">
         {message}
       </p>
 
