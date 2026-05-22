@@ -24,7 +24,16 @@ function App() {
     : 'https://story-book-docs.vercel.app'; // Replace with your live Storybook Vercel URL
 
   // Theme State
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+
+  // Synchronize document root class with theme state
+  React.useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   // Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -88,11 +97,6 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
   };
 
   return (
