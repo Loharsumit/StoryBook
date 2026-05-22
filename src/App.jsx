@@ -109,10 +109,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-500 to-indigo-600 flex items-center justify-center text-white font-extrabold text-lg shadow-md shadow-primary-500/20">
-              AG
+              AU
             </span>
             <div>
-              <h1 className="text-xl font-bold tracking-tight">Antigravity UI</h1>
+              <h1 className="text-xl font-bold tracking-tight">Aura UI</h1>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">React Component Library</p>
             </div>
           </div>
@@ -396,7 +396,7 @@ function App() {
       {/* Footer */}
       <footer className={`border-t py-12 ${darkMode ? 'bg-slate-900 border-slate-800 text-slate-400' : 'bg-white border-slate-200 text-slate-500'} text-center transition-colors duration-300`}>
         <div className="max-w-7xl mx-auto px-4">
-          <p className="text-sm font-semibold">© 2026 Antigravity UI. Designed with passion for Google DeepMind Pair Programming.</p>
+          <p className="text-sm font-semibold">© 2026 Aura UI. Designed with passion for Google DeepMind Pair Programming.</p>
           <p className="text-xs text-slate-400 mt-2">Built with React, Storybook, Jest, and Tailwind CSS.</p>
         </div>
       </footer>
