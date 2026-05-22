@@ -1,4 +1,4 @@
-# Antigravity UI
+# Aura UI
 
 [![Build Status](https://img.shields.io/badge/tests-269%20passed-success)](https://github.com)
 [![Coverage](https://img.shields.io/badge/coverage-89%25-brightgreen)](https://github.com)
@@ -6,7 +6,7 @@
 [![Tailwind Version](https://img.shields.io/badge/tailwind-v3-indigo)](https://tailwindcss.com)
 [![Storybook Version](https://img.shields.io/badge/storybook-v8-ff69b4)](https://storybook.js.org)
 
-**Antigravity UI** is a premium, high-fidelity reusable React component library built with modern React 18, beautifully styled with Tailwind CSS, exhaustively documented in Storybook 8, and rigorously tested using Jest and React Testing Library.
+**Aura UI** is a premium, high-fidelity reusable React component library built with modern React 18, beautifully styled with Tailwind CSS, exhaustively documented in Storybook 8, and rigorously tested using Jest and React Testing Library.
 
 This library is designed for absolute visual excellence, responsive fluid-grid layouts, and robust accessibility standards (WAI-ARIA, full keyboard navigation, focus-trapping, and high-contrast color balances).
 
@@ -50,7 +50,7 @@ import 'storybook-components/styles.css';
 
 ## 🛠️ Usage Example
 
-Here is a quick look at how easy it is to import and compose Antigravity UI components in your application:
+Here is a quick look at how easy it is to import and compose Aura UI components in your application:
 
 ```jsx
 import React, { useState } from 'react';
@@ -87,7 +87,7 @@ function App() {
       <ToastContainer toasts={toasts} removeToast={removeToast} position="top-right" />
       
       <Card 
-        title="Antigravity Studio" 
+        title="Aura Studio" 
         subtitle="Select a target framework to launch"
         hoverable
         bordered
