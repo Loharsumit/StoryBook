@@ -21,7 +21,7 @@ function App() {
     (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
   const storybookUrl = isLocal
     ? 'http://localhost:6006'
-    : 'https://storybook-loharsumit.vercel.app'; // Replace with your live Storybook Vercel URL
+    : 'https://story-book-docs.vercel.app'; // Replace with your live Storybook Vercel URL
 
   // Theme State
   const [darkMode, setDarkMode] = useState(false);
