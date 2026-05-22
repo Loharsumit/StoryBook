@@ -31,7 +31,7 @@ const preview = {
         }
       }, [isDark]);
 
-      return <Story />;
+      return React.createElement(Story);
     },
   ],
 };
