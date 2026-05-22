@@ -16,6 +16,13 @@ import {
 import './App.css';
 
 function App() {
+  // Dynamic Storybook Redirect (checks if running locally or deployed)
+  const isLocal = typeof window !== 'undefined' &&
+    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+  const storybookUrl = isLocal
+    ? 'http://localhost:6006'
+    : 'https://storybook-loharsumit.vercel.app'; // Replace with your live Storybook Vercel URL
+
   // Theme State
   const [darkMode, setDarkMode] = useState(false);
 
@@ -108,7 +115,7 @@ function App() {
           
           <div className="flex items-center gap-4">
             <a
-              href="http://localhost:6006"
+              href={storybookUrl}
               target="_blank"
               rel="noreferrer"
               className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition ${
